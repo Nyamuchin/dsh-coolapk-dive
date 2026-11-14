@@ -2,7 +2,31 @@
 
 在 DeepSeek Harness 里搜酷安、读帖子正文，配图直接存到本地。
 
-装好之后不用打开任何界面——直接跟 AI 说话就行，比如：
+## 安装
+
+需要 DeepSeek Harness `>=0.1.7-rc.1`、Node `>=22`。**不需要 `npm install`**——依赖已经打进包里，插件本身零外部依赖。
+
+1. 把仓库克隆到任意目录：
+
+   ```powershell
+   git clone https://github.com/Nyamuchin/dsh-coolapk-dive.git F:\path\to\dsh-coolapk-dive
+   ```
+
+2. 在 Harness 里让 AI 安装这个包，`target` 填上一步的绝对路径：
+
+   > 用 plugin_manager 安装 F:\path\to\dsh-coolapk-dive
+
+   等价于调用 `plugin_manager` 的 `action=install_bundle`，`target` 传包目录绝对路径。
+
+3. 装完到 设置 → 「酷安探帖」点一下「自检一下」。能看到 token 耗时和命中条数就说明通了。
+
+**更新版本**：`git pull` 之后，在插件页把「酷安探帖」禁用再启用一次即可生效，不用重启 Harness。
+
+**卸载**：`plugin_manager` 的 `action=remove_bundle`，或直接在插件页停用。
+
+## 装好之后怎么用
+
+不用打开任何界面——直接跟 AI 说话就行，比如：
 
 > 帮我搜一下酷安上大家怎么评价华为 FreeBuds Pro 5
 >
