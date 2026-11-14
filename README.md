@@ -4,6 +4,21 @@
 
 只读插件：**不登录、不点赞、不回帖、不收藏**，唯一的写盘动作是缓存帖子配图。
 
+## 安装
+
+需要 DeepSeek Harness `>=0.1.7-rc.1`、Node `>=22`。**不需要 `npm install`**——bcrypt 已经单文件 vendored 进 `lib/`，插件本身零依赖。
+
+把仓库克隆到任意工作目录，然后用 Harness 自带的 `plugin_manager` 安装（`target` 传包目录的绝对路径）：
+
+```powershell
+git clone https://github.com/Nyamuchin/dsh-coolapk-dive.git F:\path\to\dsh-coolapk-dive
+```
+
+然后在 Harness 里让它执行 `plugin_manager` `action=install_bundle`、`target=<上面那个绝对路径>`。
+装好后到 设置 → 「酷安探帖」点一下「自检一下」，能看到 token 耗时和命中条数就算通了。
+
+更新版本：`git pull` 之后在插件页把它禁用再启用一次，不用重启 Harness。
+
 ## 给 AI 的两个工具
 
 | 工具 | 用途 |
