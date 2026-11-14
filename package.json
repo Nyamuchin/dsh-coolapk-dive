@@ -1,0 +1,44 @@
+{
+  "name": "dsh-coolapk-dive",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Search and read Coolapk (酷安) posts from inside DeepSeek Harness, with images saved locally.",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "lib/*.mjs",
+    "lib/*.LICENSE",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "test-host.mjs"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-client-ui-settings-plugins"
+      ]
+    }
+  },
+  "engines": {
+    "dsh": ">=0.1.7-rc.1",
+    "node": ">=22"
+  },
+  "license": "MIT"
+}

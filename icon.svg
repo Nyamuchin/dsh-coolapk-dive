@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Coolapk dive">
+  <defs>
+    <linearGradient id="cpkG" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3ec98a"/>
+      <stop offset="1" stop-color="#12855c"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="16" fill="url(#cpkG)"/>
+  <!-- speech bubble: a post -->
+  <path d="M16 18h32a5 5 0 0 1 5 5v18a5 5 0 0 1-5 5H30l-9 8v-8h-5a5 5 0 0 1-5-5V23a5 5 0 0 1 5-5z"
+        fill="#ffffff" fill-opacity="0.94"/>
+  <!-- magnifier over the bubble: "search" -->
+  <circle cx="36" cy="30" r="7.5" fill="none" stroke="#12855c" stroke-width="3.6"/>
+  <path d="M41.6 35.6 47.5 41.5" stroke="#12855c" stroke-width="3.6" stroke-linecap="round"/>
+  <!-- text lines -->
+  <path d="M19.5 24.5h9M19.5 30h6" stroke="#3ec98a" stroke-width="2.6" stroke-linecap="round"/>
+</svg>
